@@ -10,35 +10,35 @@ function SettingScreen({navigation}){
                 <TouchableOpacity onPress={() => {navigation.navigate('Menu')}}>
                     <Ionicons name="chevron-back" size={24} color="white" />
                 </TouchableOpacity>
-                <Text style={{ color: Colors.text, marginTop:4,marginLeft:140,fontSize:20,fontWeight:'bold'}}>Setting</Text>
+                <Text style={{ color: Colors.text, marginTop:4,marginLeft:130,fontSize:20,fontWeight:'bold'}}>Settings</Text>
             </View>
             <View style={styles.changeLanguageLayer}>
-                <Text style={styles.font}>Change Phone Number</Text>
-                <TouchableOpacity onPress={() => {}}>
+                <Text style={styles.font}>Change Language</Text>
+                <TouchableOpacity onPress={() => {navigation.navigate('ChangeLanguage')}}>
                     <Ionicons name="chevron-forward" size={24} color="white" />
                 </TouchableOpacity>
             </View>
             <View style={styles.contactUsLayer}>
                 <Text style={styles.font}>Contact Us</Text>
-                <TouchableOpacity onPress={() => {}}>
+                <TouchableOpacity onPress={() => {navigation.navigate('ContactUs')}}>
                     <Ionicons name="chevron-forward" size={24} color="white" />
                 </TouchableOpacity>
             </View>
             <View style={styles.feedbackLayer}>
                 <Text style={styles.font}>Feedback</Text>
-                <TouchableOpacity onPress={() => {}}>
+                <TouchableOpacity onPress={() => {navigation.navigate('Feedback')}}>
                     <Ionicons name="chevron-forward" size={24} color="white" />
                 </TouchableOpacity>
             </View>
             <View style={styles.privacyInfoLayer}>
                 <Text style={styles.font}>Privacy Info</Text>
-                <TouchableOpacity onPress={() => {}}>
+                <TouchableOpacity onPress={() => {navigation.navigate('PrivacyPolicy')}}>
                     <Ionicons name="chevron-forward" size={24} color="white" />
                 </TouchableOpacity>
             </View>
             <View style={styles.aboutTableLayer}>
                 <Text style={styles.font}>About Table</Text>
-                <TouchableOpacity onPress={() => {}}>
+                <TouchableOpacity onPress={() => {navigation.navigate('AboutTable')}}>
                     <Ionicons name="chevron-forward" size={24} color="white" />
                 </TouchableOpacity>
             </View>

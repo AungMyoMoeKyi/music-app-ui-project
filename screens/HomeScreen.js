@@ -4,12 +4,11 @@ import Colors from "../constants/colors";
 import { Ionicons } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { MaterialIcons } from '@expo/vector-icons';
 
 const { width, height } = Dimensions.get('window');
 
-function HomeScreen  ({navigation}) {
+function HomeScreen({ navigation }) {
     return (
         <SafeAreaView style={styles.container}>
             <ScrollView showsVerticalScrollIndicator={false}>
@@ -48,14 +47,24 @@ function HomeScreen  ({navigation}) {
                 <View style={styles.titleContainer}>
                     <Text style={styles.title}>Top Charts</Text>
                 </View>
-                <View style={styles.musicAlbumContainer}>
-                    <Image style={styles.musicAlbumImage} source={require('../assets/whatislove.jpg')}></Image>
-                    <Image style={styles.musicAlbumImage} source={require('../assets/feelspecial.jpg')}></Image>
-                    <Image style={styles.musicAlbumImage} source={require('../assets/Ouah-ouah.jpg')}></Image>
+                <View style={styles.topChartsImageContainer}>
+                    <Image style={styles.topChartsImage} source={require('../assets/whatislove.jpg')}></Image>
+                    <Image style={styles.topChartsImage} source={require('../assets/feelspecial.jpg')}></Image>
+                    <Image style={styles.topChartsImage} source={require('../assets/Ouah-ouah.jpg')}></Image>
                 </View>
-                {/* <View style={styles.backgroundMusicLayer}>
+                <View style={styles.backgroundMusicLayer}>
                     <Image style={styles.backgroundMusic} source={require('../assets/breakthrough.png')}></Image>
-                </View> */}
+                    <View>
+                        <Text style={{ fontSize: 15, color: Colors.text, lineHeight: 30, marginRight: 120 }}>Breakthrough</Text>
+                        <Text style={{ fontSize: 11, color: Colors.text }}>Twice</Text>
+                    </View>
+                    <TouchableOpacity onPress={() => { }}>
+                        <Ionicons name="md-pause-outline" size={30} color="white" style={{marginTop:9}}/>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => { }}>
+                        <MaterialIcons name="skip-next" size={31} color="white" style={{marginTop:9}}/>
+                    </TouchableOpacity>
+                </View>
                 <View style={styles.bottomButtonNavigation}>
                     <TouchableOpacity onPress={() => { }}>
                         <AntDesign name="home" size={24} color="white" />
@@ -98,13 +107,22 @@ const styles = StyleSheet.create({
         fontWeight: 'bold'
     },
     musicAlbumContainer: {
-        width: 450,
+        width: 540,
         flexDirection: 'row',
         justifyContent: 'space-between'
     },
     musicAlbumImage: {
-        width: 140,
-        height: 160,
+        width: 170,
+        height: 170,
+    },
+    topChartsImageContainer:{
+        width: 360,
+        flexDirection: 'row',
+        justifyContent: 'space-between'
+    },
+    topChartsImage: {
+        width: 110,
+        height: 110,
     },
     albumInfo: {
         color: Colors.text
@@ -119,17 +137,18 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         position: 'relative'
     },
-    // backgroundMusicLayer:{
-    //     width:500,
-    //     height:100,
-    //     marginTop:20,
-    //     padding:10,
-    // },
-    // backgroundMusic:{
-    //     width:50,
-    //     height:50,
-    //     borderRadius:10
-    // }
+    backgroundMusicLayer: {
+        marginTop: 20,
+        padding: 10,
+        backgroundColor: 'rgba(255, 250, 255, 0.1)',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+    },
+    backgroundMusic: {
+        width: 50,
+        height: 50,
+        borderRadius: 10
+    }
 
 })
 

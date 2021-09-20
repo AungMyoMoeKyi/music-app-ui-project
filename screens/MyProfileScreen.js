@@ -25,18 +25,18 @@ function MyProfileScreen({ navigation }) {
             <View style={styles.boxContainer}>
                 <Text style={styles.textContainer}>States/Regions</Text>
             </View>
-            <TouchableOpacity style={styles.editButton} onPress={() => { }}>
-                <Text>Edit</Text>
+            <TouchableOpacity style={styles.editButton} onPress={() => navigation.navigate('EditMyProfile')}>
+                <Text>EDIT</Text>
             </TouchableOpacity>
             <View style={styles.changePhoneNoLayer}>
                 <Text style={styles.font}>Change Phone Number</Text>
-                <TouchableOpacity onPress={() => {}}>
+                <TouchableOpacity onPress={() => navigation.navigate('ChangePhoneNo')}>
                     <Ionicons name="chevron-forward" size={24} color="white" />
                 </TouchableOpacity>
             </View>
             <View style={styles.changePasswordLayer}>
                 <Text style={styles.font}>Change Password</Text>
-                <TouchableOpacity onPress={() => {}}>
+                <TouchableOpacity onPress={() => navigation.navigate('ChangePassword')}>
                     <Ionicons name="chevron-forward" size={24} color="white" />
                 </TouchableOpacity>
             </View>

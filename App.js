@@ -4,6 +4,14 @@ import HomeScreen from './screens/HomeScreen';
 import MenuScreen from './screens/MenuScreen';
 import MyProfileScreen from './screens/MyProfileScreen';
 import SettingScreen from './screens/SettingScreen';
+import EditMyProfileScreen from './screens/EditMyProfileScreen';
+import ChangePhoneNoScreen from './screens/ChangePhoneNoScreen';
+import ChangePasswordScreen from './screens/ChangePasswordScreen';
+import ChangeLanguageScreen from './screens/ChangeLanguageScreen';
+import ContactUsScreen from './screens/ContactUsScreen';
+import PrivacyPolicyScreen from './screens/PrivacyPolicyScreen';
+import AboutTableScreen from './screens/AboutTableScreen';
+import FeedbackScreen from './screens/FeedbackScreen';
 import React,{useState} from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -39,6 +47,14 @@ export default function App() {
           <Stack.Screen name="Menu" component={MenuScreen} options={{ headerShown: false }} />
           <Stack.Screen name="MyProfile" component={MyProfileScreen} options={{ headerShown: false }} />
           <Stack.Screen name="Setting" component={SettingScreen} options={{ headerShown: false }} />
+          <Stack.Screen name="EditMyProfile" component={EditMyProfileScreen} options={{ headerShown: false }} />
+          <Stack.Screen name="ChangePhoneNo" component={ChangePhoneNoScreen} options={{ headerShown: false }} />
+          <Stack.Screen name="ChangePassword" component={ChangePasswordScreen} options={{ headerShown: false }} />
+          <Stack.Screen name="ChangeLanguage" component={ChangeLanguageScreen} options={{ headerShown: false }} />
+          <Stack.Screen name="ContactUs" component={ContactUsScreen} options={{ headerShown: false }} />
+          <Stack.Screen name="PrivacyPolicy" component={PrivacyPolicyScreen} options={{ headerShown: false }} />
+          <Stack.Screen name="AboutTable" component={AboutTableScreen} options={{ headerShown: false }} />
+          <Stack.Screen name="Feedback" component={FeedbackScreen} options={{ headerShown: false }} />
         </Stack.Navigator>
       </NavigationContainer>
     </View>
