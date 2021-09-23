@@ -17,7 +17,7 @@ function EditMyProfileScreen({ navigation }) {
                     <TouchableOpacity onPress={() => navigation.navigate('MyProfile')}>
                         <Ionicons name="chevron-back" size={24} color="white" />
                     </TouchableOpacity>
-                    <Text style={{ color: Colors.text, marginTop: 5 }}>My Profile</Text>
+                    <Text style={{ color: Colors.text, marginTop: 5,fontFamily:'gotham-bold'}}>My Profile</Text>
                 </View>
                 <View style={styles.profileImageContainer}>
                     <FontAwesome5 name="user-circle" size={80} color="white" style={{ padding: 20 }} />
@@ -38,7 +38,7 @@ function EditMyProfileScreen({ navigation }) {
                     <TextInput placeholder="States/Regions" placeholderTextColor={Colors.text} style={styles.inputTextContainer} />
                 </View>
                 <TouchableOpacity style={styles.saveButton} onPress={() => { }}>
-                    <Text>SAVE</Text>
+                    <Text style={{fontFamily:'gotham-bold'}}>SAVE</Text>
                 </TouchableOpacity>
             </View>
         </TouchableWithoutFeedback>

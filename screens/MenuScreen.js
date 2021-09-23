@@ -19,8 +19,8 @@ function MenuScreen({ navigation }) {
                     </TouchableOpacity>
                 </View>
                 <View style={styles.infoContainer}>
-                    <Text style={{ color: Colors.text, fontSize:17, lineHeight:40}}>Name       :   User Name</Text>
-                    <Text style={{ color: Colors.text, fontSize:17}}>Table ID   :   01343434343</Text>
+                    <Text style={{ color: Colors.text, fontSize:15, lineHeight:40}}>Name       :   User Name</Text>
+                    <Text style={{ color: Colors.text, fontSize:15}}>Table ID   :   01343434343</Text>
                 </View>
             </View>
             <View>
@@ -50,7 +50,7 @@ function MenuScreen({ navigation }) {
                 </View>
             </View>
             <TouchableOpacity style={styles.logout} onPress={()=>{}}>
-                <Text>Log Out</Text>
+                <Text style={{fontFamily:'gotham-bold'}}>Log Out</Text>
             </TouchableOpacity>
         </View>
     );
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
         marginTop: 12,
     },
     infoContainer:{
-        marginRight:70,
+        marginRight:90,
         marginTop:15,
     },
     myProfileLayer:{
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     font:{
         color:Colors.text,
         fontSize:15,
-        //fontFamily:'gotham-medium'
+        fontFamily:'gotham-light'
     },
     logout:{
         backgroundColor:'#E50914',

@@ -10,7 +10,7 @@ function SettingScreen({navigation}){
                 <TouchableOpacity onPress={() => {navigation.navigate('Menu')}}>
                     <Ionicons name="chevron-back" size={24} color="white" />
                 </TouchableOpacity>
-                <Text style={{ color: Colors.text, marginTop:4,marginLeft:130,fontSize:20,fontWeight:'bold'}}>Settings</Text>
+                <Text style={{ color: Colors.text, marginTop:4,marginLeft:130,fontSize:20,fontFamily:'gotham-bold'}}>Settings</Text>
             </View>
             <View style={styles.changeLanguageLayer}>
                 <Text style={styles.font}>Change Language</Text>
@@ -59,7 +59,7 @@ const styles=StyleSheet.create({
     font:{
         color:Colors.text,
         fontSize:15,
-        //fontFamily:'gotham-medium'
+        fontFamily:'gotham-light'
     },
     changeLanguageLayer:{
         marginTop:55,

@@ -10,7 +10,7 @@ function PrivacyPolicyScreen({ navigation }) {
                 <TouchableOpacity onPress={() => navigation.navigate('Setting')}>
                     <Ionicons name="chevron-back" size={24} color="white" />
                 </TouchableOpacity>
-                <Text style={{ color: Colors.text, marginTop: 5 }}>Privacy Policy</Text>
+                <Text style={{ color: Colors.text, marginTop: 5,fontFamily:'gotham-bold' }}>Privacy Policy</Text>
             </View>
             <View style={styles.textContainer}>
                 <Text style={styles.font}>Your skills of writing Paragraph will make you a perfect man.If you look at any printed prose book, you will see that each chapter is divided up into sections, the first line of each being indented slightly to the right. These sections are called Paragraph. Chapters, essays and other prose compositions are broken up into paragraphs, to make the reading of them easier.

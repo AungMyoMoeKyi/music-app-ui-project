@@ -16,7 +16,7 @@ function FeedbackScreen({ navigation }) {
                     <TouchableOpacity onPress={() => navigation.navigate('Setting')}>
                         <Ionicons name="chevron-back" size={24} color="white" />
                     </TouchableOpacity>
-                    <Text style={{ color: Colors.text, marginTop: 5 }}>Feedback</Text>
+                    <Text style={{ color: Colors.text, marginTop: 5,fontFamily:'gotham-bold'}}>Feedback</Text>
                 </View>
                 <View style={styles.inputContainer}>
                     <Text style={styles.font}>Rate Your Experience</Text>

@@ -12,6 +12,7 @@ import ContactUsScreen from './screens/ContactUsScreen';
 import PrivacyPolicyScreen from './screens/PrivacyPolicyScreen';
 import AboutTableScreen from './screens/AboutTableScreen';
 import FeedbackScreen from './screens/FeedbackScreen';
+import AlbumSongsScreen from './screens/AlbumSongsScreen';
 import React,{useState} from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -20,7 +21,8 @@ import AppLoading from "expo-app-loading";
 
 const fetchFonts = () => {
   return Font.loadAsync({
-    "gotham-book": require("./assets/fonts/GothamBook.ttf"),
+    "gotham-bold": require("./assets/fonts/Gotham-Bold.otf"),
+    "gotham-light": require("./assets/fonts/Gotham-Light.otf"),
     "gotham-medium": require("./assets/fonts/GothamMedium.ttf"),
   });
 };
@@ -55,6 +57,7 @@ export default function App() {
           <Stack.Screen name="PrivacyPolicy" component={PrivacyPolicyScreen} options={{ headerShown: false }} />
           <Stack.Screen name="AboutTable" component={AboutTableScreen} options={{ headerShown: false }} />
           <Stack.Screen name="Feedback" component={FeedbackScreen} options={{ headerShown: false }} />
+          <Stack.Screen name="AlbumSongs" component={AlbumSongsScreen} options={{ headerShown: false }} />
         </Stack.Navigator>
       </NavigationContainer>
     </View>

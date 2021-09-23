@@ -11,7 +11,7 @@ function MyProfileScreen({ navigation }) {
                 <TouchableOpacity onPress={() => navigation.navigate('Menu')}>
                     <Ionicons name="chevron-back" size={24} color="white" />
                 </TouchableOpacity>
-                <Text style={{ color: Colors.text, marginTop: 5 }}>My Profile</Text>
+                <Text style={{ color: Colors.text, marginTop: 5, fontFamily:'gotham-bold'}}>My Profile</Text>
             </View>
             <View style={styles.profileImageContainer}>
                 <FontAwesome5 name="user-circle" size={80} color="white" />
@@ -26,7 +26,7 @@ function MyProfileScreen({ navigation }) {
                 <Text style={styles.textContainer}>States/Regions</Text>
             </View>
             <TouchableOpacity style={styles.editButton} onPress={() => navigation.navigate('EditMyProfile')}>
-                <Text>EDIT</Text>
+                <Text style={{fontFamily:'gotham-bold'}}>EDIT</Text>
             </TouchableOpacity>
             <View style={styles.changePhoneNoLayer}>
                 <Text style={styles.font}>Change Phone Number</Text>
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
     font:{
         color:Colors.text,
         fontSize:15,
-        //fontFamily:'gotham-medium'
+        fontFamily:'gotham-light'
     },
     changePhoneNoLayer:{
         marginTop:60,

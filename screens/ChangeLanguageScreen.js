@@ -10,7 +10,7 @@ function ChangeLanguageScreen({ navigation }) {
                 <TouchableOpacity onPress={() => navigation.navigate('Setting')}>
                     <Ionicons name="chevron-back" size={24} color="white" />
                 </TouchableOpacity>
-                <Text style={{ color: Colors.text, marginTop: 5 }}>Change Language</Text>
+                <Text style={{ color: Colors.text, marginTop: 5, fontFamily:'gotham-bold' }}>Change Language</Text>
             </View>
             <View style={styles.inputContainer}>
                 <TouchableOpacity style={styles.chooseOptionBox} onPress={()=>{}}>

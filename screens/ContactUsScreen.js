@@ -12,7 +12,7 @@ function ContactUsScreen({ navigation }) {
                 <TouchableOpacity onPress={() => navigation.navigate('Setting')}>
                     <Ionicons name="chevron-back" size={24} color="white" />
                 </TouchableOpacity>
-                <Text style={{ color: Colors.text, marginTop: 5 }}>Contact Us</Text>
+                <Text style={{ color: Colors.text, marginTop: 5, fontFamily:'gotham-bold' }}>Contact Us</Text>
             </View>
             <View style={styles.inputContainer}>
                 <Text style={styles.font}>Call us</Text>

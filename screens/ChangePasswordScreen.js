@@ -25,7 +25,7 @@ function ChangePasswordScreen({ navigation }) {
                     <TouchableOpacity onPress={() => navigation.navigate('MyProfile')}>
                         <Ionicons name="chevron-back" size={24} color="white" />
                     </TouchableOpacity>
-                    <Text style={{ color: Colors.text, marginTop: 5 }}>Change Password</Text>
+                    <Text style={{ color: Colors.text, marginTop: 5, fontFamily:'gotham-bold'}}>Change Password</Text>
                 </View>
                 <View style={styles.inputContainer}>
                     <Text style={styles.font}>Enter your old password</Text>
@@ -61,7 +61,7 @@ function ChangePasswordScreen({ navigation }) {
                     </View>
                 </View>
                 <TouchableOpacity style={styles.saveButton} onPress={() => { }}>
-                    <Text>SAVE</Text>
+                    <Text style={{fontFamily:'gotham-bold'}}>SAVE</Text>
                 </TouchableOpacity>
             </View>
         </TouchableWithoutFeedback>

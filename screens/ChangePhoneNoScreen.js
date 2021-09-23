@@ -19,7 +19,7 @@ function ChangePhoneNoScreen({ navigation }) {
                     <TouchableOpacity onPress={() => navigation.navigate('MyProfile')}>
                         <Ionicons name="chevron-back" size={24} color="white" />
                     </TouchableOpacity>
-                    <Text style={{ color: Colors.text, marginTop: 5 }}>Change Phone Number</Text>
+                    <Text style={{ color: Colors.text, marginTop: 5, fontFamily:'gotham-bold' }}>Change Phone Number</Text>
                 </View>
                 <View style={styles.inputContainer}>
                     <Text style={styles.font}>Enter your new phone number</Text>
@@ -37,7 +37,7 @@ function ChangePhoneNoScreen({ navigation }) {
                     </View>
                 </View>
                 <TouchableOpacity style={styles.saveButton} onPress={() => { }}>
-                    <Text>SAVE</Text>
+                    <Text style={{fontFamily:'gotham-bold'}}>SAVE</Text>
                 </TouchableOpacity>
             </View>
         </TouchableWithoutFeedback>
