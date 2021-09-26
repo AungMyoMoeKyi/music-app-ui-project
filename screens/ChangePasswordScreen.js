@@ -23,45 +23,45 @@ function ChangePasswordScreen({ navigation }) {
             <View style={styles.container}>
                 <View style={styles.backward}>
                     <TouchableOpacity onPress={() => navigation.navigate('MyProfile')}>
-                        <Ionicons name="chevron-back" size={24} color="white" />
+                        <Image source={require('../assets/backward.png')} style={{ marginLeft: 12.18, width: 9.63, height: 15.42 }} />
                     </TouchableOpacity>
-                    <Text style={{ color: Colors.text, marginTop: 5, fontFamily:'gotham-bold'}}>Change Password</Text>
+                    <Text style={{ color: Colors.text, fontFamily: 'gotham-bold', fontSize: 13, marginLeft: 25.19,marginBottom:53 }}>Change Password</Text>
                 </View>
                 <View style={styles.inputContainer}>
                     <Text style={styles.font}>Enter your old password</Text>
-                    <View style={styles.inputControls}>
+                    <View style={styles.passwordContainer}>
                         <TextInput
-                            secureTextEntry={visible}  style={styles.inputTextContainer}
+                            secureTextEntry={visible} style={styles.password}
                         />
-                        <TouchableOpacity onPress={() => {setShow(!show),setVisible(!visible)}}>
-                            <Ionicons name={show===false?'ios-eye-off' : 'ios-eye'} size={24} color="white" style={{marginTop:20,marginRight:10}}/>
+                        <TouchableOpacity onPress={() => { setShow(!show), setVisible(!visible) }}>
+                            <Ionicons name={show === false ? 'ios-eye-off' : 'ios-eye'} size={18} color="white" style={{ marginVertical: 15, marginRight: 18.21}} />
                         </TouchableOpacity>
                     </View>
                 </View>
                 <View style={styles.inputContainer}>
                     <Text style={styles.font}>Enter new password</Text>
-                    <View style={styles.inputControls}>
+                    <View style={styles.passwordContainer}>
                         <TextInput
-                            secureTextEntry={visible1}  style={styles.inputTextContainer}
+                            secureTextEntry={visible1} style={styles.password}
                         />
-                        <TouchableOpacity onPress={() => {setShow1(!show1),setVisible1(!visible1)}}>
-                            <Ionicons name={show1===false?'ios-eye-off' : 'ios-eye'} size={24} color="white" style={{marginTop:20,marginRight:10}}/>
+                        <TouchableOpacity onPress={() => { setShow1(!show1), setVisible1(!visible1) }}>
+                            <Ionicons name={show1 === false ? 'ios-eye-off' : 'ios-eye'} size={18} color="white" style={{ marginVertical: 15, marginRight: 18.21 }} />
                         </TouchableOpacity>
                     </View>
                 </View>
                 <View style={styles.inputContainer}>
                     <Text style={styles.font}>Enter confirm password</Text>
-                    <View style={styles.inputControls}>
+                    <View style={styles.passwordContainer}>
                         <TextInput
-                            secureTextEntry={visible2}  style={styles.inputTextContainer}
+                            secureTextEntry={visible2} style={styles.password}
                         />
-                        <TouchableOpacity onPress={() => {setShow2(!show2),setVisible2(!visible2)}}>
-                            <Ionicons name={show2===false?'ios-eye-off' : 'ios-eye'} size={24} color="white" style={{marginTop:20,marginRight:10}}/>
+                        <TouchableOpacity onPress={() => { setShow2(!show2), setVisible2(!visible2) }}>
+                            <Ionicons name={show2 === false ? 'ios-eye-off' : 'ios-eye'} size={18} color="white" style={{ marginVertical: 15, marginRight: 18.21 }} />
                         </TouchableOpacity>
                     </View>
                 </View>
                 <TouchableOpacity style={styles.saveButton} onPress={() => { }}>
-                    <Text style={{fontFamily:'gotham-bold'}}>SAVE</Text>
+                    <Text style={{ fontFamily: 'gotham-bold', fontSize: 21 }}>SAVE</Text>
                 </TouchableOpacity>
             </View>
         </TouchableWithoutFeedback>
@@ -80,36 +80,38 @@ const styles = StyleSheet.create({
     },
     font: {
         color: Colors.text,
-        fontSize: 15,
+        fontSize: 13,
+        fontFamily:'gotham-light'
     },
     inputContainer: {
-        marginTop: 40,
-        marginHorizontal: 10,
+        marginHorizontal: 11,
     },
-    inputControls:{
-        flexDirection:'row',
-        justifyContent:'space-between',
-        backgroundColor:'#262626',
-        marginTop:10,
-        borderRadius:10
-    },      
-    inputTextContainer: {
+    passwordContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        backgroundColor: '#262626',
+        marginTop: 7,
+        borderRadius: 10,
+        width:353,
+        height:42,
+        marginBottom:35
+    },
+    password: {
         color: Colors.text,
         padding: 15,
-        fontSize: 15,
+        fontSize: 13,
         marginTop: 10,
-        width:'90%',
-        backgroundColor:'#262626',
-        borderRadius:10
+        //backgroundColor: '#262626',
+        borderRadius: 10
     },
     saveButton: {
-        marginTop: 280,
+        marginTop: 297,
         backgroundColor: '#ffffff',
-        width: 300,
-        height: 50,
+        width: 285,
+        height: 52,
         alignItems: 'center',
         justifyContent: 'center',
-        marginHorizontal: 40
+        marginHorizontal: 45
     },
 })
 

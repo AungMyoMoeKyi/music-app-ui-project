@@ -1,9 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, TextInput, TouchableWithoutFeedback, Keyboard } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, TextInput, TouchableWithoutFeedback, Keyboard, Image } from 'react-native';
 import Colors from '../constants/colors';
-import { Ionicons } from '@expo/vector-icons';
-import { FontAwesome5 } from '@expo/vector-icons';
-import { Feather } from '@expo/vector-icons';
 
 function EditMyProfileScreen({ navigation }) {
     return (
@@ -15,14 +12,15 @@ function EditMyProfileScreen({ navigation }) {
             <View style={styles.container}>
                 <View style={styles.backward}>
                     <TouchableOpacity onPress={() => navigation.navigate('MyProfile')}>
-                        <Ionicons name="chevron-back" size={24} color="white" />
+                        <Image source={require('../assets/backward.png')} style={{ marginLeft: 12.18, width: 9.63, height: 15.42 }} />
                     </TouchableOpacity>
-                    <Text style={{ color: Colors.text, marginTop: 5,fontFamily:'gotham-bold'}}>My Profile</Text>
+                    <Text style={{ color: Colors.text, fontFamily: 'gotham-bold', fontSize: 13, marginLeft: 26.19 }}>My Profile</Text>
                 </View>
                 <View style={styles.profileImageContainer}>
-                    <FontAwesome5 name="user-circle" size={80} color="white" style={{ padding: 20 }} />
+                    <Image style={styles.profileImage} source={require('../assets/pp.png')} />
                     <TouchableOpacity onPress={() => { }}>
-                        <Ionicons name="ios-camera" size={30} color="white" style={{ marginLeft: 120 }} />
+                        {/* <Ionicons name="ios-camera" size={30} color="white" style={{ marginLeft: 120 }} /> */}
+                        <Image style={{ width: 22.25, height: 16, marginLeft: 105.42, marginTop: 17 }} source={require('../assets/camera.png')} />
                     </TouchableOpacity>
                 </View>
                 <View style={styles.boxContainer}>
@@ -31,14 +29,14 @@ function EditMyProfileScreen({ navigation }) {
                 <View style={styles.boxContainer}>
                     <TextInput placeholder="09/01/2020" placeholderTextColor={Colors.text} style={styles.inputTextContainer} />
                     <TouchableOpacity onPress={() => { }}>
-                        <Feather name="calendar" size={24} color="white" style={{ marginRight: 10, marginTop: 10 }} />
+                        <Image style={{width:14,height:15,marginTop:14,marginRight:11}} source={require('../assets/calendar.png')}/>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.boxContainer}>
-                    <TextInput placeholder="States/Regions" placeholderTextColor={Colors.text} style={styles.inputTextContainer} />
+                    <TextInput placeholder="Yangon" placeholderTextColor={Colors.text} style={styles.inputTextContainer} />
                 </View>
                 <TouchableOpacity style={styles.saveButton} onPress={() => { }}>
-                    <Text style={{fontFamily:'gotham-bold'}}>SAVE</Text>
+                    <Text style={{ fontFamily: 'gotham-bold', fontSize: 21 }}>SAVE</Text>
                 </TouchableOpacity>
             </View>
         </TouchableWithoutFeedback>
@@ -56,8 +54,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     profileImageContainer: {
-        width: 150,
-        height: 150,
+        width: 131.49,
+        height: 131.49,
         backgroundColor: '#262626',
         alignItems: 'center',
         justifyContent: 'center',
@@ -65,12 +63,14 @@ const styles = StyleSheet.create({
         marginTop: 40
     },
     profileImage: {
-        width: 57,
-        height: 12,
+        width: 90.74,
+        height: 65.85,
+        marginTop:32.42,
+        marginHorizontal:20
     },
     boxContainer: {
-        width: 326,
-        height: 48,
+        width: 285,
+        height: 43,
         backgroundColor: '#262626',
         marginTop: 30,
         marginLeft: 30,
@@ -80,7 +80,8 @@ const styles = StyleSheet.create({
     inputTextContainer: {
         color: Colors.text,
         padding: 15,
-        fontSize: 15
+        fontSize: 13,
+        fontFamily:'gotham-medium'
     },
     saveButton: {
         marginTop: 230,

@@ -1,5 +1,5 @@
 export default{
     button:'#ffff24',
-    text:'#fff',
+    text:'#FFFFFF',
     alert:'#FF0000'
 };

@@ -24,6 +24,7 @@ const fetchFonts = () => {
     "gotham-bold": require("./assets/fonts/Gotham-Bold.otf"),
     "gotham-light": require("./assets/fonts/Gotham-Light.otf"),
     "gotham-medium": require("./assets/fonts/GothamMedium.ttf"),
+    "gotham-book": require("./assets/fonts/GothamBook.ttf"),
   });
 };
 

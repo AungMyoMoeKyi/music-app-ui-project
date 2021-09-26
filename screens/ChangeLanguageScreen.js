@@ -1,22 +1,21 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import Colors from '../constants/colors';
-import { Ionicons } from '@expo/vector-icons';
 
 function ChangeLanguageScreen({ navigation }) {
     return (
         <View style={styles.container}>
             <View style={styles.backward}>
                 <TouchableOpacity onPress={() => navigation.navigate('Setting')}>
-                    <Ionicons name="chevron-back" size={24} color="white" />
+                    <Image source={require('../assets/backward.png')} style={{ marginLeft: 12.18, width: 9.63, height: 15.42 }} />
                 </TouchableOpacity>
-                <Text style={{ color: Colors.text, marginTop: 5, fontFamily:'gotham-bold' }}>Change Language</Text>
+                <Text style={{ color: Colors.text, fontFamily: 'gotham-bold', fontSize: 13, marginLeft: 26.19 }}>Change Language</Text>
             </View>
             <View style={styles.inputContainer}>
-                <TouchableOpacity style={styles.chooseOptionBox} onPress={()=>{}}>
+                <TouchableOpacity style={styles.chooseOptionBox} onPress={() => { }}>
                     <Text style={styles.font}>English</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.chooseOptionBox} onPress={()=>{}}>
+                <TouchableOpacity style={styles.chooseOptionBox} onPress={() => { }}>
                     <Text style={styles.font}>မြန်မာ</Text>
                 </TouchableOpacity>
             </View>
@@ -34,22 +33,24 @@ const styles = StyleSheet.create({
         marginTop: 60,
         flexDirection: 'row',
     },
-    inputContainer:{
-        marginTop:50
+    inputContainer: {
+        marginTop: 53,
     },
-    chooseOptionBox:{
+    chooseOptionBox: {
         backgroundColor: 'rgba(255, 250, 255, 0.1)',
-        width:380,
-        height:60,
-        justifyContent:'center',
-        borderRadius:10,
-        marginVertical:10
+        width: 353,
+        height: 42,
+        justifyContent: 'center',
+        borderRadius: 10,
+        marginBottom: 18,
+        marginHorizontal: 11,
     },
-    font:{
-        color:Colors.text,
-        fontSize:15,
-        marginLeft:10
-        //fontFamily:'gotham-medium'
+    font: {
+        color: Colors.text,
+        fontSize: 13,
+        marginLeft: 15,
+        marginVertical:14,
+        fontFamily:'gotham-medium'
     },
 })
 

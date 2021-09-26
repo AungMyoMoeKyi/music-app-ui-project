@@ -3,11 +3,11 @@ import { View, Text, StyleSheet, TouchableOpacity, Image, ScrollView } from 'rea
 import Colors from '../constants/colors';
 import { Ionicons } from '@expo/vector-icons';
 
-function AlbumSongsScreen({ Navigation }) {
+function AlbumSongsScreen({ navigation }) {
     return (
         <View style={styles.container}>
             <View style={styles.backward}>
-                <TouchableOpacity onPress={() => navigation.navigate('Setting')}>
+                <TouchableOpacity onPress={() => navigation.navigate('Home')}>
                     <Ionicons name="chevron-back" size={24} color="white" />
                 </TouchableOpacity>
             </View>

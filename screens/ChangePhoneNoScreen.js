@@ -17,27 +17,27 @@ function ChangePhoneNoScreen({ navigation }) {
             <View style={styles.container}>
                 <View style={styles.backward}>
                     <TouchableOpacity onPress={() => navigation.navigate('MyProfile')}>
-                        <Ionicons name="chevron-back" size={24} color="white" />
+                        <Image source={require('../assets/backward.png')} style={{ marginLeft: 12.18, width: 9.63, height: 15.42 }} />
                     </TouchableOpacity>
-                    <Text style={{ color: Colors.text, marginTop: 5, fontFamily:'gotham-bold' }}>Change Phone Number</Text>
+                    <Text style={{ color: Colors.text, fontFamily: 'gotham-bold', marginLeft: 26.19, fontSize: 13,marginBottom:53 }}>Change Phone Number</Text>
                 </View>
                 <View style={styles.inputContainer}>
                     <Text style={styles.font}>Enter your new phone number</Text>
-                    <TextInput style={styles.phoneNo}/>
+                    <TextInput style={styles.phoneNo} />
                 </View>
                 <View style={styles.inputContainer}>
                     <Text style={styles.font}>Enter your password</Text>
-                    <View style={styles.inputControls}>
+                    <View style={styles.passwordContainer}>
                         <TextInput
-                            secureTextEntry={visible}  style={styles.inputTextContainer}
+                            secureTextEntry={visible} style={styles.password}
                         />
-                        <TouchableOpacity onPress={() => {setShow(!show),setVisible(!visible)}}>
-                            <Ionicons name={show===false?'ios-eye-off' : 'ios-eye'} size={24} color="white" style={{marginTop:20,marginRight:10}}/>
+                        <TouchableOpacity onPress={() => { setShow(!show), setVisible(!visible) }}>
+                            <Ionicons name={show === false ? 'ios-eye-off' : 'ios-eye'} size={18} color="white" style={{ marginVertical: 15, marginRight: 18.21 }} />
                         </TouchableOpacity>
                     </View>
                 </View>
                 <TouchableOpacity style={styles.saveButton} onPress={() => { }}>
-                    <Text style={{fontFamily:'gotham-bold'}}>SAVE</Text>
+                    <Text style={{ fontFamily: 'gotham-bold', fontSize: 21 }}>SAVE</Text>
                 </TouchableOpacity>
             </View>
         </TouchableWithoutFeedback>
@@ -56,36 +56,39 @@ const styles = StyleSheet.create({
     },
     font: {
         color: Colors.text,
-        fontSize: 15,
+        fontSize: 13,
+        fontFamily:'gotham-light'
     },
     inputContainer: {
-        marginTop: 50,
-        marginHorizontal: 10,
+        marginBottom: 35,
+        marginHorizontal: 11,
     },
-    inputControls:{
-        flexDirection:'row',
-        justifyContent:'space-between',
-        backgroundColor:'#262626',
-        marginTop:10,
-        borderRadius:10
-    },      
-    inputTextContainer: {
+    passwordContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        backgroundColor: '#262626',
+        borderRadius: 10,
+        marginTop:7,
+        width: 353,
+        height:42,
+    },
+    password: {
         color: Colors.text,
         padding: 15,
-        fontSize: 15,
-        marginTop: 10,
-        width:'90%',
+        fontSize: 13,
         //backgroundColor:'#262626',
-        borderRadius:10
+        borderRadius: 10,
+        marginTop: 7,
     },
     phoneNo: {
         color: Colors.text,
         padding: 15,
-        fontSize: 15,
-        marginTop: 10,
-        width:'100%',
-        backgroundColor:'#262626',
-        borderRadius:10
+        fontSize: 13,
+        marginTop: 7,
+        width: 353,
+        height:42,
+        backgroundColor: '#262626',
+        borderRadius: 10,
     },
     saveButton: {
         marginTop: 390,
