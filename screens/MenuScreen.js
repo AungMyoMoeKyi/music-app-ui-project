@@ -1,8 +1,6 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import Colors from '../constants/colors';
-import { Ionicons } from '@expo/vector-icons';
-import { FontAwesome5 } from '@expo/vector-icons';
 
 function MenuScreen({ navigation }) {
     return (
@@ -71,8 +69,9 @@ const styles = StyleSheet.create({
         height: 59,
         flexDirection: 'row',
         justifyContent: 'space-between',
-        marginLeft: 65,
+        marginHorizontal: 65,
         marginTop: 27,
+        alignItems:'center',
     },
     profileImage: {
 

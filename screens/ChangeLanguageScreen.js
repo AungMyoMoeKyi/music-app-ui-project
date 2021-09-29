@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import Colors from '../constants/colors';
+import { AntDesign } from '@expo/vector-icons';
 
 function ChangeLanguageScreen({ navigation }) {
+    const [englishShow, setEnglishShow] = useState(true);
+    const [mynShow, setMynShow] = useState(false);
+
     return (
         <View style={styles.container}>
             <View style={styles.backward}>
@@ -12,11 +16,13 @@ function ChangeLanguageScreen({ navigation }) {
                 <Text style={{ color: Colors.text, fontFamily: 'gotham-bold', fontSize: 13, marginLeft: 26.19 }}>Change Language</Text>
             </View>
             <View style={styles.inputContainer}>
-                <TouchableOpacity style={styles.chooseOptionBox} onPress={() => { }}>
+                <TouchableOpacity style={styles.chooseOptionBox} onPress={() => { setEnglishShow(!englishShow),setMynShow(!mynShow) }}>
                     <Text style={styles.font}>English</Text>
+                    <AntDesign name={englishShow===true ? "check" : ""} size={11,11} color="white" style={{marginTop:16,marginRight:15}}/>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.chooseOptionBox} onPress={() => { }}>
+                <TouchableOpacity style={styles.chooseOptionBox} onPress={() => {setMynShow(!mynShow),setEnglishShow(!englishShow)}}>
                     <Text style={styles.font}>မြန်မာ</Text>
+                    <AntDesign name={mynShow===true ? "check" : ""} size={11,11} color="white" style={{marginTop:16,marginRight:15}}/>
                 </TouchableOpacity>
             </View>
         </View>
@@ -40,7 +46,8 @@ const styles = StyleSheet.create({
         backgroundColor: 'rgba(255, 250, 255, 0.1)',
         width: 353,
         height: 42,
-        justifyContent: 'center',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
         borderRadius: 10,
         marginBottom: 18,
         marginHorizontal: 11,
@@ -49,8 +56,8 @@ const styles = StyleSheet.create({
         color: Colors.text,
         fontSize: 13,
         marginLeft: 15,
-        marginVertical:14,
-        fontFamily:'gotham-medium'
+        marginVertical: 14,
+        fontFamily: 'gotham-medium'
     },
 })
 

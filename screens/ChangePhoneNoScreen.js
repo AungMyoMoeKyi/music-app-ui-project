@@ -32,7 +32,7 @@ function ChangePhoneNoScreen({ navigation }) {
                             secureTextEntry={visible} style={styles.password}
                         />
                         <TouchableOpacity onPress={() => { setShow(!show), setVisible(!visible) }}>
-                            <Ionicons name={show === false ? 'ios-eye-off' : 'ios-eye'} size={18} color="white" style={{ marginVertical: 15, marginRight: 18.21 }} />
+                            <Ionicons name={show === false ? 'ios-eye-off' : 'ios-eye'} size={18} color="white" style={{ marginVertical: 13, marginRight: 18.21 }} />
                         </TouchableOpacity>
                     </View>
                 </View>
@@ -78,7 +78,9 @@ const styles = StyleSheet.create({
         fontSize: 13,
         //backgroundColor:'#262626',
         borderRadius: 10,
-        marginTop: 7,
+        //marginTop: 7,
+        width: 320,
+        height:44,
     },
     phoneNo: {
         color: Colors.text,

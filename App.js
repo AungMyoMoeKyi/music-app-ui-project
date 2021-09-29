@@ -8,6 +8,7 @@ import EditMyProfileScreen from './screens/EditMyProfileScreen';
 import ChangePhoneNoScreen from './screens/ChangePhoneNoScreen';
 import ChangePasswordScreen from './screens/ChangePasswordScreen';
 import ChangeLanguageScreen from './screens/ChangeLanguageScreen';
+import NotificationSettingScreen from './screens/NotificationSettingScreen';
 import ContactUsScreen from './screens/ContactUsScreen';
 import PrivacyPolicyScreen from './screens/PrivacyPolicyScreen';
 import AboutTableScreen from './screens/AboutTableScreen';
@@ -54,6 +55,7 @@ export default function App() {
           <Stack.Screen name="ChangePhoneNo" component={ChangePhoneNoScreen} options={{ headerShown: false }} />
           <Stack.Screen name="ChangePassword" component={ChangePasswordScreen} options={{ headerShown: false }} />
           <Stack.Screen name="ChangeLanguage" component={ChangeLanguageScreen} options={{ headerShown: false }} />
+          <Stack.Screen name="NotificationSetting" component={NotificationSettingScreen} options={{ headerShown: false }} />
           <Stack.Screen name="ContactUs" component={ContactUsScreen} options={{ headerShown: false }} />
           <Stack.Screen name="PrivacyPolicy" component={PrivacyPolicyScreen} options={{ headerShown: false }} />
           <Stack.Screen name="AboutTable" component={AboutTableScreen} options={{ headerShown: false }} />

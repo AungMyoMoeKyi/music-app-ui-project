@@ -1,8 +1,12 @@
-import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, TextInput, TouchableWithoutFeedback, Keyboard, Image } from 'react-native';
+import React,{useState} from 'react';
+import { View, Text, StyleSheet, TouchableOpacity, TextInput, TouchableWithoutFeedback, Keyboard, Image, Modal, Pressable, Alert } from 'react-native';
 import Colors from '../constants/colors';
+import { Feather } from '@expo/vector-icons';
 
 function EditMyProfileScreen({ navigation }) {
+
+    const [modalVisible, setModalVisible] = useState(false);
+
     return (
         <TouchableWithoutFeedback
             onPress={() => {
@@ -16,9 +20,40 @@ function EditMyProfileScreen({ navigation }) {
                     </TouchableOpacity>
                     <Text style={{ color: Colors.text, fontFamily: 'gotham-bold', fontSize: 13, marginLeft: 26.19 }}>My Profile</Text>
                 </View>
+
+                <Modal
+                    animationType="slide"
+                    transparent={true}
+                    visible={modalVisible}
+                    onRequestClose={() => {
+                        Alert.alert("Modal has been closed.");
+                        setModalVisible(!modalVisible);
+                    }}
+                >
+                    <View style={styles.backgroundOpacityStyle}>
+                        <View style={styles.modalView}>
+                            <Text style={styles.modalTitleText}>Edit Profile Photo</Text>
+                            <TouchableOpacity onPress={()=>{}}>
+                                <Text style={styles.modalText}>Gallery</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity onPress={()=>{}}>
+                                <Text style={styles.modalText}>Camera</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity onPress={()=>{}}>
+                                <Text style={styles.modalText}>Remove Photo</Text>
+                            </TouchableOpacity>
+                            <Pressable
+                                onPress={() => setModalVisible(!modalVisible)}
+                            >
+                                <Feather name="x" size={30} color="white" style={styles.cancel}/>
+                            </Pressable>
+                        </View>
+                    </View>
+                </Modal>
+
                 <View style={styles.profileImageContainer}>
                     <Image style={styles.profileImage} source={require('../assets/pp.png')} />
-                    <TouchableOpacity onPress={() => { }}>
+                    <TouchableOpacity onPress={() => setModalVisible(true)}>
                         {/* <Ionicons name="ios-camera" size={30} color="white" style={{ marginLeft: 120 }} /> */}
                         <Image style={{ width: 22.25, height: 16, marginLeft: 105.42, marginTop: 17 }} source={require('../assets/camera.png')} />
                     </TouchableOpacity>
@@ -29,7 +64,7 @@ function EditMyProfileScreen({ navigation }) {
                 <View style={styles.boxContainer}>
                     <TextInput placeholder="09/01/2020" placeholderTextColor={Colors.text} style={styles.inputTextContainer} />
                     <TouchableOpacity onPress={() => { }}>
-                        <Image style={{width:14,height:15,marginTop:14,marginRight:11}} source={require('../assets/calendar.png')}/>
+                        <Image style={{ width: 14, height: 15, marginTop: 14, marginRight: 11 }} source={require('../assets/calendar.png')} />
                     </TouchableOpacity>
                 </View>
                 <View style={styles.boxContainer}>
@@ -48,6 +83,13 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '100%',
         backgroundColor: '#000000',
+        //opacity:0.9
+    },
+    backgroundOpacityStyle:{
+        opacity:0.9,
+        backgroundColor: '#000000',
+        width: '100%',
+        height: '100%',
     },
     backward: {
         marginTop: 60,
@@ -65,15 +107,17 @@ const styles = StyleSheet.create({
     profileImage: {
         width: 90.74,
         height: 65.85,
-        marginTop:32.42,
-        marginHorizontal:20
+        marginTop: 32.42,
+        marginHorizontal: 20
     },
     boxContainer: {
-        width: 285,
-        height: 43,
+        // width: 285,
+        // height: 43,
+        flex:1,
+        maxHeight:43,
         backgroundColor: '#262626',
         marginTop: 30,
-        marginLeft: 30,
+        marginHorizontal: 45,
         flexDirection: 'row',
         justifyContent: 'space-between'
     },
@@ -81,17 +125,43 @@ const styles = StyleSheet.create({
         color: Colors.text,
         padding: 15,
         fontSize: 13,
-        fontFamily:'gotham-medium'
+        fontFamily: 'gotham-medium'
     },
     saveButton: {
         marginTop: 230,
         backgroundColor: '#ffffff',
-        width: 300,
-        height: 50,
+        // width: 300,
+        // height: 50,
+        flex:1,
+        maxHeight:50,
         alignItems: 'center',
         justifyContent: 'center',
         marginHorizontal: 40
     },
+    modalView: {
+        marginTop: 250,
+        //backgroundColor: "red",
+        borderRadius: 20,
+        padding: 35,
+        alignItems: "center"
+      },
+      modalTitleText: {
+        marginBottom: 21,
+        textAlign: "center",
+        fontFamily:'gotham-bold',
+        fontSize:15,
+        color:Colors.text
+      },
+      modalText:{
+        marginBottom: 21,
+        textAlign: "center",
+        fontFamily:'gotham-light',
+        fontSize:15,
+        color:Colors.text
+      },
+      cancel:{
+          marginTop:44
+      }
 })
 
 export default EditMyProfileScreen;

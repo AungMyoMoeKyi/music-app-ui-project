@@ -34,7 +34,7 @@ function ChangePasswordScreen({ navigation }) {
                             secureTextEntry={visible} style={styles.password}
                         />
                         <TouchableOpacity onPress={() => { setShow(!show), setVisible(!visible) }}>
-                            <Ionicons name={show === false ? 'ios-eye-off' : 'ios-eye'} size={18} color="white" style={{ marginVertical: 15, marginRight: 18.21}} />
+                            <Ionicons name={show === false ? 'ios-eye-off' : 'ios-eye'} size={18} color="white" style={{ marginVertical: 13, marginRight: 18.21}} />
                         </TouchableOpacity>
                     </View>
                 </View>
@@ -45,7 +45,7 @@ function ChangePasswordScreen({ navigation }) {
                             secureTextEntry={visible1} style={styles.password}
                         />
                         <TouchableOpacity onPress={() => { setShow1(!show1), setVisible1(!visible1) }}>
-                            <Ionicons name={show1 === false ? 'ios-eye-off' : 'ios-eye'} size={18} color="white" style={{ marginVertical: 15, marginRight: 18.21 }} />
+                            <Ionicons name={show1 === false ? 'ios-eye-off' : 'ios-eye'} size={18} color="white" style={{ marginVertical: 13, marginRight: 18.21 }} />
                         </TouchableOpacity>
                     </View>
                 </View>
@@ -56,7 +56,7 @@ function ChangePasswordScreen({ navigation }) {
                             secureTextEntry={visible2} style={styles.password}
                         />
                         <TouchableOpacity onPress={() => { setShow2(!show2), setVisible2(!visible2) }}>
-                            <Ionicons name={show2 === false ? 'ios-eye-off' : 'ios-eye'} size={18} color="white" style={{ marginVertical: 15, marginRight: 18.21 }} />
+                            <Ionicons name={show2 === false ? 'ios-eye-off' : 'ios-eye'} size={18} color="white" style={{ marginVertical: 13, marginRight: 18.21 }} />
                         </TouchableOpacity>
                     </View>
                 </View>
@@ -85,6 +85,7 @@ const styles = StyleSheet.create({
     },
     inputContainer: {
         marginHorizontal: 11,
+        marginBottom:35
     },
     passwordContainer: {
         flexDirection: 'row',
@@ -94,15 +95,16 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         width:353,
         height:42,
-        marginBottom:35
     },
     password: {
         color: Colors.text,
         padding: 15,
         fontSize: 13,
-        marginTop: 10,
+        //marginTop: 10,
         //backgroundColor: '#262626',
-        borderRadius: 10
+        borderRadius: 10,
+        width:320,
+        height:44,
     },
     saveButton: {
         marginTop: 297,

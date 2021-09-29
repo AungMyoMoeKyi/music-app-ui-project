@@ -67,8 +67,10 @@ const styles = StyleSheet.create({
         height: 12,
     },
     boxContainer: {
-        width: 285,
-        height: 43,
+        // width: 285,
+        // height: 43,
+        flex:1,
+        maxHeight:43,
         backgroundColor: '#262626',
         marginTop: 35,
         marginHorizontal: 45
@@ -82,8 +84,10 @@ const styles = StyleSheet.create({
     editButton: {
         marginTop: 35,
         backgroundColor: '#D4D4D4',
-        width: 96,
-        height: 25,
+        // width: 96,
+        // height: 25,
+        flex:1,
+        maxHeight:25,
         alignItems: 'center',
         justifyContent: 'center',
         marginHorizontal: 140

@@ -17,6 +17,12 @@ function SettingScreen({ navigation }) {
                     <Image source={require('../assets/forward.png')} style={{ marginRight: 13.17, width: 9.61, height: 15.37 }} />
                 </TouchableOpacity>
             </View>
+            <View style={styles.NotificationSettingLayer}>
+                <Text style={styles.font}>Notification Setting</Text>
+                <TouchableOpacity onPress={() => { navigation.navigate('NotificationSetting') }}>
+                    <Image source={require('../assets/forward.png')} style={{ marginRight: 13.17, width: 9.61, height: 15.37 }} />
+                </TouchableOpacity>
+            </View>
             <View style={styles.contactUsLayer}>
                 <Text style={styles.font}>Contact Us</Text>
                 <TouchableOpacity onPress={() => { navigation.navigate('ContactUs') }}>
@@ -62,6 +68,12 @@ const styles = StyleSheet.create({
     },
     changeLanguageLayer: {
         marginTop: 53,
+        marginLeft: 11,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+    },
+    NotificationSettingLayer:{
+        marginTop: 30,
         marginLeft: 11,
         flexDirection: 'row',
         justifyContent: 'space-between',

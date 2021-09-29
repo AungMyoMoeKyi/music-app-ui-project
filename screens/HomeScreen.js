@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity, Dimensions, Image, ScrollView, FlatList, TouchableWithoutFeedback } from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity, Dimensions, Image, ScrollView, FlatList, TouchableWithoutFeedback, StatusBar } from 'react-native';
 import Colors from "../constants/colors";
 import DummyData from '../Mock/Dummy';
 
@@ -9,7 +9,8 @@ function HomeScreen({ navigation }) {
 
     const _renderItem = ({ item, index }) => {
         return (
-            <View>
+            <View> 
+                
                 <View style={{
                     marginLeft: index === 0 ? 8 : 0,
                     marginRight: index === DummyData.RecentAlbums.length - 1 ? 0 : 10
@@ -46,7 +47,7 @@ function HomeScreen({ navigation }) {
                     <Image source={require('../assets/notification.png')} style={{width:17,height:19,marginLeft:237}}/>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => navigation.navigate('Menu')}>
-                    <Image source={require('../assets/menu.png')} style={{width:19,height:15.4,marginRight:11,marginLeft:15,marginTop:3}}/>
+                    <Image source={require('../assets/menu.png')} style={{width:19,height:15.4,marginRight:11,marginLeft:15,marginTop:4}}/>
                 </TouchableOpacity>
             </View>
             <ScrollView>
@@ -92,19 +93,6 @@ function HomeScreen({ navigation }) {
                     />
                 </View>
             </ScrollView>
-            {/* <View style={styles.backgroundMusicLayer}>
-                <Image style={styles.backgroundMusic} source={require('../assets/breakthrough.png')}></Image>
-                <View>
-                    <Text style={{ fontSize: 15, color: Colors.text, lineHeight: 30, marginRight: 120 }}>Breakthrough</Text>
-                    <Text style={{ fontSize: 11, color: Colors.text }}>Twice</Text>
-                </View>
-                <TouchableOpacity onPress={() => { }}>
-                    <Ionicons name="md-pause-outline" size={30} color="white" style={{ marginTop: 9 }} />
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => { }}>
-                    <MaterialIcons name="skip-next" size={31} color="white" style={{ marginTop: 9 }} />
-                </TouchableOpacity>
-            </View> */}
             <View style={styles.footerNavigation}>
                 <TouchableOpacity onPress={() => { }}>
                     <Image style={{ width: 25, height: 40 }} source={require('../assets/home.png')} />
@@ -115,8 +103,6 @@ function HomeScreen({ navigation }) {
                 <TouchableOpacity onPress={() => { }}>
                     <Image style={{ width: 35, height: 39 }} source={require('../assets/library.png')} />
                 </TouchableOpacity>
-            </View>
-            <View style={styles.labelNavigation}>
             </View>
         </SafeAreaView>
     );
@@ -181,17 +167,6 @@ const styles = StyleSheet.create({
         padding: 10,
         marginTop:14.15
         //backgroundColor:'red',
-    },
-    labelNavigation: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        position: 'relative'
-    },
-    backgroundMusicLayer: {
-        padding: 10,
-        backgroundColor: 'rgba(255, 250, 255, 0.1)',
-        flexDirection: 'row',
-        justifyContent: 'space-between',
     },
     backgroundMusic: {
         width: 50,
