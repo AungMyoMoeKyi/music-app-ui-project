@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity, Dimensions, Image, ScrollView, FlatList, TouchableWithoutFeedback, StatusBar } from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity, Dimensions, Image, FlatList, TouchableHighlight } from 'react-native';
 import Colors from "../constants/colors";
 import DummyData from '../Mock/Dummy';
 
@@ -50,12 +50,12 @@ function HomeScreen({ navigation }) {
                     <Image source={require('../assets/menu.png')} style={{width:19,height:15.4,marginRight:11,marginLeft:15,marginTop:4}}/>
                 </TouchableOpacity>
             </View>
-            <ScrollView>
+            {/* <ScrollView> */}
                 <View style={styles.titleContainer}>
                     <Text style={styles.title}>Recent Played</Text>
                 </View>
                 <View>
-                    <TouchableWithoutFeedback onPress={() => { navigation.navigate('AlbumSongs') }}>
+                    <TouchableHighlight onPress={() => { navigation.navigate('AlbumSongs') }}>
                         <FlatList
                             keyExractor={(item) => 'recent' + item.id}
                             horizontal
@@ -64,7 +64,7 @@ function HomeScreen({ navigation }) {
                             data={DummyData.RecentAlbums}
                             renderItem={_renderItem}
                         />
-                    </TouchableWithoutFeedback>
+                    </TouchableHighlight>
                 </View>
                 <View style={styles.titleContainer}>
                     <Text style={styles.title}>Latest Album</Text>
@@ -92,16 +92,16 @@ function HomeScreen({ navigation }) {
                         renderItem={_renderItemTopChart}
                     />
                 </View>
-            </ScrollView>
+            {/* </ScrollView> */}
             <View style={styles.footerNavigation}>
                 <TouchableOpacity onPress={() => { }}>
-                    <Image style={{ width: 25, height: 40 }} source={require('../assets/home.png')} />
+                    <Image style={{ width: 24, height: 35.24 }} source={require('../assets/home.png')} />
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => { }}>
-                    <Image style={{ width: 35, height: 40 }} source={require('../assets/search.png')} />
+                    <Image style={{ width: 27, height: 31.69 }} source={require('../assets/search.png')} />
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => { }}>
-                    <Image style={{ width: 35, height: 39 }} source={require('../assets/library.png')} />
+                    <Image style={{ width: 28, height: 28.18 }} source={require('../assets/library.png')} />
                 </TouchableOpacity>
             </View>
         </SafeAreaView>
@@ -162,18 +162,14 @@ const styles = StyleSheet.create({
         fontSize: 8
     },
     footerNavigation: {
+        flex:1,
         flexDirection: 'row',
         justifyContent: 'space-evenly',
-        padding: 10,
-        marginTop:14.15
+        //padding: 5,
+        marginTop:14.15,
+        alignItems:'flex-end'
         //backgroundColor:'red',
     },
-    backgroundMusic: {
-        width: 50,
-        height: 50,
-        borderRadius: 10
-    }
-
 })
 
 export default HomeScreen;

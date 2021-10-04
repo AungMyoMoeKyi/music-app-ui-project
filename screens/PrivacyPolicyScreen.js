@@ -9,9 +9,9 @@ function PrivacyPolicyScreen({ navigation }) {
                 <TouchableOpacity onPress={() => navigation.navigate('Setting')}>
                     <Image source={require('../assets/backward.png')} style={{ marginLeft: 12.18, width: 9.63, height: 15.42 }} />
                 </TouchableOpacity>
-                <Text style={{ color: Colors.text, fontFamily: 'gotham-bold', fontSize: 13, marginLeft: 26.19 }}>Privacy Policy</Text>
+                <Text style={{ color: Colors.text, fontFamily: 'gotham-bold', fontSize: 13, marginLeft: 26.19}}>Privacy Policy</Text>
             </View>
-            <ScrollView>
+            <ScrollView style={{marginTop:52.91}}>
                 <View style={styles.textContainer}>
                     <Text style={styles.font}>Your skills of writing Paragraph will make you a perfect man.If you look at any printed prose book, you will see that each chapter is divided up into sections, the first line of each being indented slightly to the right. These sections are called Paragraph. Chapters, essays and other prose compositions are broken up into paragraphs, to make the reading of them easier.
 
@@ -104,8 +104,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     textContainer: {
-        marginTop: 52.91,
-        marginHorizontal: 11.39
+        //marginTop: 52.91,
+        marginHorizontal: 11.39,
     },
     font: {
         color: Colors.text,

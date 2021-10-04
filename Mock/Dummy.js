@@ -49,6 +49,11 @@ export const TopCharts = [{
     title: 'Ouah-Ouah',
     artist: 'Twice',
     thumbnail: require('../assets/Ouah-ouah.jpg')
+},{
+    id: '004',
+    title: 'Merry & Happy',
+    artist: 'Twice',
+    thumbnail: require('../assets/merryandhappy.jpg')
 }
 ]
 
